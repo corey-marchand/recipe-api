@@ -1,11 +1,15 @@
-FROM python:3
+FROM python:3.8-slim-buster
+
+# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
+
+# Set work directory
 WORKDIR /code
+
+# Install dependencies
 COPY requirements.txt /code/
-COPY poetry.lock pyproject.toml /code/
-RUN poetry shell
-RUN pip3 install poetry
-RUN poetry install
+RUN pip install -r requirements.txt
+
+# Copy project
 COPY . /code/
