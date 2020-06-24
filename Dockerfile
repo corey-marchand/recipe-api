@@ -4,5 +4,8 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
 COPY requirements.txt /code/
-RUN poetry install -r requirements.txt
+COPY poetry.lock pyproject.toml /code/
+RUN poetry shell
+RUN pip3 install poetry
+RUN poetry install
 COPY . /code/
