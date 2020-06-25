@@ -9,6 +9,6 @@ class RecipesList(generics.ListCreateAPIView):
     serializer_class = RecipesSerializer
 
 class RecipesDetail(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (isAuthorOrReadOnly,)
     queryset = Recipes.objects.all()
-    serializer_class = RecipesSerializer
     serializer_class = RecipesSerializer
