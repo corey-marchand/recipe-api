@@ -422,8 +422,19 @@ version = "0.57.0"
 [package.dependencies]
 six = "*"
 
+[[package]]
+category = "main"
+description = "Radically simplified static file serving for WSGI applications"
+name = "whitenoise"
+optional = false
+python-versions = ">=3.5, <4"
+version = "5.1.0"
+
+[package.extras]
+brotli = ["brotli"]
+
 [metadata]
-content-hash = "3a82ac992eb4384edb847d9cca56a3103265cec16e4b9d419590092f08d26b3b"
+content-hash = "e82b6fa0d1130366359721d0244a4f82f89e6d2a84cf2d79f272b0f57b75db5b"
 python-versions = "~3.8"
 
 [metadata.files]
@@ -656,4 +667,8 @@ urllib3 = [
 websocket-client = [
     {file = "websocket_client-0.57.0-py2.py3-none-any.whl", hash = "sha256:0fc45c961324d79c781bab301359d5a1b00b13ad1b10415a4780229ef71a5549"},
     {file = "websocket_client-0.57.0.tar.gz", hash = "sha256:d735b91d6d1692a6a181f2a8c9e0238e5f6373356f561bb9dc4c7af36f452010"},
+]
+whitenoise = [
+    {file = "whitenoise-5.1.0-py2.py3-none-any.whl", hash = "sha256:6dd26bfda3af29177d8ab7333a0c7b7642eb615ce83764f4d15a9aecda3201c4"},
+    {file = "whitenoise-5.1.0.tar.gz", hash = "sha256:60154b976a13901414a25b0273a841145f77eb34a141f9ae032a0ace3e4d5b27"},
 ]
