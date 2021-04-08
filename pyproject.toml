@@ -6,7 +6,7 @@ authors = ["corey-marchand <corey.marchand@me.com>"]
 
 [tool.poetry.dependencies]
 python = "~3.8"
-django = "^3.0.7"
+django = "^3.0.14"
 djangorestframework = "^3.11.0"
 docker = "^4.2.1"
 docker-compose = "^1.26.0"
